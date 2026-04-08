@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redoclub — Inteligência que Escala</title>
+  <meta name="description" content="Redoclub — automação inteligente, CRM e treinamento para negócios que querem crescer." />
+  <link rel="canonical" href="https://info.redoclub.com.br" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Redoclub" />
+  <meta property="og:description" content="Automação inteligente, CRM e treinamento para negócios que querem crescer." />
+  <meta property="og:url" content="https://info.redoclub.com.br" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #0a0a0b;
+      --surface: #111114;
+      --border: #1e1e24;
+      --accent: #c8ff00;
+      --accent-dim: #9bbf00;
+      --text: #f0f0ee;
+      --muted: #7a7a82;
+      --radius: 12px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10,10,11,0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 clamp(1.5rem, 5vw, 4rem);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.4rem;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.03em;
+    }
+
+    .nav-logo span { color: var(--accent); }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav ul a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    nav ul a:hover { color: var(--text); }
+
+    /* ── HERO ── */
+    #inicio {
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 5vw, 4rem);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #inicio::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(200,255,0,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      max-width: 760px;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 em {
+      font-style: normal;
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--muted);
+      max-width: 480px;
+      margin-bottom: 3rem;
+      font-weight: 300;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--accent);
+      color: #0a0a0b;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.875rem;
+      letter-spacing: 0.03em;
+      padding: 0.85rem 1.75rem;
+      border-radius: var(--radius);
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-primary:hover {
+      background: #d4ff1a;
+      transform: translateY(-2px);
+    }
+
+    /* ── SECTIONS ── */
+    section {
+      padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem);
+      border-top: 1px solid var(--border);
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      letter-spacing: -0.03em;
+      margin-bottom: 1.5rem;
+      max-width: 640px;
+    }
+
+    p { color: #b0b0b8; margin-bottom: 1rem; }
+    p:last-child { margin-bottom: 0; }
+
+    /* ── CARDS ── */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-top: 3rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      transition: border-color 0.25s;
+    }
+
+    .card:hover { border-color: var(--accent); }
+
+    .card-icon {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
+    .card p { font-size: 0.9rem; }
+
+    /* ── INFO TABLE ── */
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+
+    .info-table tr {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .info-table tr:last-child { border-bottom: none; }
+
+    .info-table td {
+      padding: 1rem 0.5rem;
+      vertical-align: top;
+    }
+
+    .info-table td:first-child {
+      color: var(--muted);
+      font-weight: 500;
+      white-space: nowrap;
+      width: 200px;
+      padding-right: 2rem;
+    }
+
+    .info-table td:last-child {
+      color: var(--text);
+    }
+
+    /* ── CONTATO ── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .contact-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+
+    .contact-item .label {
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.4rem;
+    }
+
+    .contact-item a, .contact-item span {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      word-break: break-all;
+    }
+
+    .contact-item a:hover { color: var(--accent); }
+
+    /* ── PRIVACY ── */
+    #privacidade h3 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--text);
+      margin: 2.5rem 0 0.75rem;
+    }
+
+    #privacidade h3:first-of-type { margin-top: 2rem; }
+
+    #privacidade ul {
+      padding-left: 1.25rem;
+      color: #b0b0b8;
+      font-size: 0.92rem;
+    }
+
+    #privacidade ul li { margin-bottom: 0.5rem; }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      padding: 3rem clamp(1.5rem, 5vw, 4rem);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .footer-brand {
+      max-width: 300px;
+    }
+
+    .footer-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.3rem;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-logo span { color: var(--accent); }
+
+    .footer-desc {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .footer-links h4 {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .footer-links ul a {
+      color: #8a8a92;
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links ul a:hover { color: var(--text); }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem clamp(1.5rem, 5vw, 4rem);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(200,255,0,0.1);
+      color: var(--accent);
+      border: 1px solid rgba(200,255,0,0.2);
+      border-radius: 999px;
+      padding: 0.2rem 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 640px) {
+      nav ul { display: none; }
+      .info-table td:first-child { width: auto; padding-right: 1rem; font-size: 0.8rem; }
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-eyebrow { animation: fadeUp 0.6s ease both; }
+    h1             { animation: fadeUp 0.6s 0.1s ease both; }
+    .hero-sub      { animation: fadeUp 0.6s 0.2s ease both; }
+    .btn-primary   { animation: fadeUp 0.6s 0.3s ease both; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#inicio">Redo<span>club</span></a>
+  <ul>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#missao">Missão</a></li>
+    <li><a href="#informacoes">Informações</a></li>
+    <li><a href="#contato">Contato</a></li>
+    <li><a href="#privacidade">Privacidade</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="inicio" style="border-top:none;">
+  <p class="hero-eyebrow">Automação · CRM · Treinamento</p>
+  <h1>Inteligência que <em>escala</em> o seu negócio</h1>
+  <p class="hero-sub">
+    Redoclub é uma consultoria especializada em automação inteligente, integração de CRM e treinamento em desenvolvimento profissional para empresas que querem crescer com eficiência.
+  </p>
+  <a class="btn-primary" href="#contato">Entre em contato →</a>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <p class="section-label">Sobre nós</p>
+  <h2>Quem somos</h2>
+  <p>
+    A <strong>Redoclub</strong> nasceu da convicção de que pequenas e médias empresas merecem acesso às mesmas ferramentas de automação e inteligência que as grandes corporações usam. Somos uma empresa brasileira, fundada em setembro de 2022 em São Bento do Sul — SC, focada em transformar processos manuais em fluxos automatizados e eficientes.
+  </p>
+  <p>
+    Atuamos na interseção entre tecnologia e estratégia comercial: conectamos sistemas, qualificamos leads via inteligência artificial, integramos CRMs e entregamos dashboards que dão clareza real sobre os resultados do seu negócio.
+  </p>
+  <p>
+    Nossa atuação é registrada sob a atividade econômica <strong>CNAE P-8599-6/04 — Treinamento em desenvolvimento profissional e gerencial</strong>, combinando capacitação humana com implementação técnica.
+  </p>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-icon">⚡</div>
+      <h3>Automação de Processos</h3>
+      <p>Fluxos n8n, webhooks, integrações entre sistemas e eliminação de trabalho manual repetitivo.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🤖</div>
+      <h3>Agentes de IA</h3>
+      <p>SDRs via WhatsApp, qualificação de leads e atendimento automatizado com modelos de linguagem.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">📊</div>
+      <h3>Dashboards & CRM</h3>
+      <p>Painéis de performance, integração com Kommo, relatórios e visibilidade total sobre resultados.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🎯</div>
+      <h3>Tráfego Pago</h3>
+      <p>Gestão de campanhas Meta Ads e Google Ads com integração à API de Conversões e rastreamento preciso.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MISSÃO -->
+<section id="missao">
+  <p class="section-label">Nossa Missão</p>
+  <h2>Por que existimos</h2>
+  <p>
+    Nossa missão é <strong>democratizar o acesso a sistemas inteligentes</strong> para empresas que não têm equipe de tecnologia, mas precisam da mesma eficiência de quem tem.
+  </p>
+  <p>
+    Acreditamos que automação bem implementada não é um custo — é alavanca. Cada processo que automatizamos libera tempo humano para o que realmente importa: vender, atender bem e crescer.
+  </p>
+  <p>
+    Fazemos isso combinando tecnologia real com estratégia comercial aplicada, entregando resultados mensuráveis desde a primeira semana de implementação.
+  </p>
+</section>
+
+<!-- INFORMAÇÕES LEGAIS -->
+<section id="informacoes">
+  <p class="section-label">Informações Institucionais</p>
+  <h2>Dados da empresa</h2>
+
+  <table class="info-table">
+    <tr>
+      <td>Razão Social</td>
+      <td>Joao Pedro Redo</td>
+    </tr>
+    <tr>
+      <td>Nome Fantasia</td>
+      <td>Redoclub</td>
+    </tr>
+    <tr>
+      <td>CNPJ</td>
+      <td>47.889.684/0001-98</td>
+    </tr>
+    <tr>
+      <td>Natureza Jurídica</td>
+      <td>Empresário Individual (213-5) — MEI</td>
+    </tr>
+    <tr>
+      <td>Situação Cadastral</td>
+      <td><span class="badge">ATIVA</span> desde 09/09/2022</td>
+    </tr>
+    <tr>
+      <td>Atividade Principal</td>
+      <td>Treinamento em desenvolvimento profissional e gerencial (CNAE P-8599-6/04)</td>
+    </tr>
+    <tr>
+      <td>Regime Tributário</td>
+      <td>Simples Nacional — Optante MEI desde 09/09/2022</td>
+    </tr>
+    <tr>
+      <td>Capital Social</td>
+      <td>R$ 5.000,00</td>
+    </tr>
+    <tr>
+      <td>Endereço</td>
+      <td>Av. São Bento, 218 — Rio Negro, São Bento do Sul — SC, CEP 89.287-365</td>
+    </tr>
+    <tr>
+      <td>Domínio</td>
+      <td>info.redoclub.com.br</td>
+    </tr>
+    <tr>
+      <td>Data de Abertura</td>
+      <td>09 de setembro de 2022</td>
+    </tr>
+    <tr>
+      <td>Tipo de Unidade</td>
+      <td>Matriz</td>
+    </tr>
+  </table>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+  <p class="section-label">Contato</p>
+  <h2>Fale com a gente</h2>
+  <p>Estamos disponíveis para atendimento comercial, suporte e parcerias.</p>
+
+  <div class="contact-grid">
+    <div class="contact-item">
+      <p class="label">Telefone</p>
+      <a href="tel:+5547999999999">+55 (47) 99999-9999</a>
+      <!-- Substitua pelo número real -->
+    </div>
+    <div class="contact-item">
+      <p class="label">WhatsApp</p>
+      <a href="https://wa.me/5547999999999" target="_blank" rel="noopener">+55 (47) 99999-9999</a>
+      <!-- Substitua pelo número real -->
+    </div>
+    <div class="contact-item">
+      <p class="label">E-mail</p>
+      <a href="mailto:contato@redoclub.com.br">contato@redoclub.com.br</a>
+      <!-- Substitua pelo e-mail real -->
+    </div>
+    <div class="contact-item">
+      <p class="label">Localização</p>
+      <span>São Bento do Sul — SC, Brasil</span>
+    </div>
+  </div>
+</section>
+
+<!-- POLÍTICA DE PRIVACIDADE -->
+<section id="privacidade">
+  <p class="section-label">Legal</p>
+  <h2>Política de Privacidade</h2>
+  <p>
+    <em>Última atualização: abril de 2025</em>
+  </p>
+  <p>
+    Esta Política de Privacidade descreve como a <strong>Redoclub</strong> (Joao Pedro Redo — CNPJ 47.889.684/0001-98) coleta, utiliza e protege as informações dos usuários que interagem com nossos serviços, plataformas e aplicações, incluindo integrações com redes sociais como o Facebook/Meta.
+  </p>
+
+  <h3>1. Dados que coletamos</h3>
+  <p>Podemos coletar as seguintes categorias de dados, conforme a interação do usuário:</p>
+  <ul>
+    <li>Dados de identificação: nome, e-mail, telefone e WhatsApp fornecidos voluntariamente;</li>
+    <li>Dados de comportamento: páginas visitadas, tempo de sessão e origem do acesso;</li>
+    <li>Dados de campanhas: informações provenientes de anúncios Meta Ads e Google Ads;</li>
+    <li>Dados de CRM: informações inseridas em formulários de qualificação ou atendimento automatizado.</li>
+  </ul>
+
+  <h3>2. Finalidade do uso dos dados</h3>
+  <ul>
+    <li>Prestar os serviços contratados ou solicitados;</li>
+    <li>Qualificar e segmentar leads para fins comerciais;</li>
+    <li>Mensurar a efetividade de campanhas de tráfego pago;</li>
+    <li>Melhorar nossos sistemas e fluxos de atendimento;</li>
+    <li>Cumprir obrigações legais e regulatórias.</li>
+  </ul>
+
+  <h3>3. Base legal (LGPD)</h3>
+  <p>
+    O tratamento de dados pessoais realizado pela Redoclub se fundamenta nas bases legais previstas na Lei Geral de Proteção de Dados (Lei nº 13.709/2018): consentimento do titular, legítimo interesse, execução de contrato e cumprimento de obrigação legal.
+  </p>
+
+  <h3>4. Compartilhamento de dados</h3>
+  <p>
+    Não comercializamos dados pessoais. Podemos compartilhar informações com ferramentas de terceiros utilizadas para prestação dos serviços (ex: plataformas de CRM, automação e publicidade), sempre sob termos de uso e privacidade adequados. Dados podem ser compartilhados com autoridades competentes quando exigido por lei.
+  </p>
+
+  <h3>5. Integrações com Meta (Facebook/Instagram)</h3>
+  <p>
+    Nossas aplicações podem utilizar a API do Facebook para fins de geração de leads, rastreamento de conversões e automação de mensagens. O uso dessas ferramentas segue os <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener" style="color:var(--accent)">Termos de Serviço e a Política de Privacidade da Meta</a>. Não armazenamos credenciais de acesso dos usuários às plataformas Meta.
+  </p>
+
+  <h3>6. Retenção de dados</h3>
+  <p>
+    Os dados são mantidos pelo período necessário à prestação dos serviços ou ao cumprimento de obrigações legais. Após esse período, os dados são anonimizados ou excluídos de forma segura.
+  </p>
+
+  <h3>7. Direitos do titular</h3>
+  <p>Em conformidade com a LGPD, o titular tem direito a:</p>
+  <ul>
+    <li>Confirmar a existência de tratamento de seus dados;</li>
+    <li>Acessar, corrigir ou atualizar seus dados;</li>
+    <li>Solicitar a portabilidade, anonimização ou exclusão de seus dados;</li>
+    <li>Revogar o consentimento a qualquer momento;</li>
+    <li>Peticionar à Autoridade Nacional de Proteção de Dados (ANPD).</li>
+  </ul>
+  <p>
+    Para exercer esses direitos, entre em contato pelo e-mail: <a href="mailto:contato@redoclub.com.br" style="color:var(--accent)">contato@redoclub.com.br</a>
+  </p>
+
+  <h3>8. Segurança</h3>
+  <p>
+    Adotamos medidas técnicas e organizacionais adequadas para proteger os dados pessoais contra acessos não autorizados, perdas ou divulgações indevidas, incluindo uso de conexões criptografadas (HTTPS), controle de acesso e boas práticas de desenvolvimento seguro.
+  </p>
+
+  <h3>9. Cookies</h3>
+  <p>
+    Podemos utilizar cookies e tecnologias similares para fins de rastreamento de desempenho e personalização de conteúdo. O usuário pode gerenciar as preferências de cookies diretamente no navegador.
+  </p>
+
+  <h3>10. Alterações nesta política</h3>
+  <p>
+    Esta política pode ser atualizada periodicamente. A versão vigente sempre estará disponível nesta página com a data da última revisão.
+  </p>
+
+  <h3>11. Contato do responsável</h3>
+  <p>
+    Joao Pedro Redo — CNPJ 47.889.684/0001-98<br>
+    Av. São Bento, 218 — Rio Negro, São Bento do Sul — SC, CEP 89.287-365<br>
+    E-mail: <a href="mailto:contato@redoclub.com.br" style="color:var(--accent)">contato@redoclub.com.br</a>
+  </p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <div class="footer-logo">Redo<span>club</span></div>
+    <p class="footer-desc">
+      Automação inteligente, CRM e treinamento para negócios que crescem com eficiência.<br><br>
+      CNPJ: 47.889.684/0001-98<br>
+      São Bento do Sul — SC, Brasil
+    </p>
+  </div>
+
+  <div class="footer-links">
+    <h4>Navegação</h4>
+    <ul>
+      <li><a href="#sobre">Sobre nós</a></li>
+      <li><a href="#missao">Nossa Missão</a></li>
+      <li><a href="#informacoes">Informações</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-links">
+    <h4>Legal</h4>
+    <ul>
+      <li><a href="#privacidade">Política de Privacidade</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="footer-bottom">
+  <span>© 2025 Redoclub — Joao Pedro Redo (CNPJ 47.889.684/0001-98). Todos os direitos reservados.</span>
+  <span>info.redoclub.com.br</span>
+</div>
+
+</body>
+</html>
