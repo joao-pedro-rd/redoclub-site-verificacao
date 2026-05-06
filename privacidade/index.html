@@ -8,49 +8,149 @@
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <nav><div class="container nav-container"><a href="/" class="nav-logo">Redo<span>club</span></a><button class="mobile-menu-btn">☰</button><ul class="nav-links"><li><a href="/#servicos">Serviços</a></li><li><a href="/#diferenciais">Por que nós</a></li><li><a href="/contato/">Contato</a></li></ul></div></nav>
+  <header>
+    <div class="container nav-container">
+      <a href="/" class="logo" aria-label="Página inicial da Redoclub">Redoclub</a>
+      <nav class="nav-desktop" aria-label="Navegação principal desktop">
+        <a href="/#sobre" class="nav-link">Sobre</a>
+        <div class="dropdown">
+          <a href="/#servicos" class="nav-link" aria-haspopup="true">Serviços</a>
+          <div class="dropdown-content" aria-label="Menu de serviços">
+            <a href="/servicos/agente-de-ia/" class="dropdown-item">Agente de IA</a>
+            <a href="/servicos/implementacao-de-crm/" class="dropdown-item">Implementação de CRM</a>
+            <a href="/servicos/gestao-de-trafego/" class="dropdown-item">Gestão de Tráfego</a>
+            <a href="/servicos/landing-page/" class="dropdown-item">Landing Page</a>
+            <a href="/servicos/dashboard-dados/" class="dropdown-item">Dashboard & Dados</a>
+          </div>
+        </div>
+        <a href="/contato/" class="nav-link">Contato</a>
+      </nav>
+      <button class="burger-menu" id="burger-btn" aria-label="Abrir menu mobile" aria-expanded="false" aria-controls="mobile-menu">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+    </div>
+  </header>
+
+  <nav class="nav-mobile-overlay" id="mobile-menu" aria-label="Navegação principal mobile">
+    <a href="/#sobre" class="nav-mobile-link">Sobre</a>
+    <button class="nav-mobile-link" id="mobile-servicos-toggle" aria-expanded="false" style="background:none; border:none; width:100%; text-align:left; border-bottom: 1px solid rgba(255,255,255,0.05);">
+      Serviços <span class="icon" aria-hidden="true">+</span>
+    </button>
+    <div class="mobile-submenu" id="mobile-submenu">
+      <a href="/servicos/agente-de-ia/" class="nav-mobile-sublink">Agente de IA</a>
+      <a href="/servicos/implementacao-de-crm/" class="nav-mobile-sublink">Implementação de CRM</a>
+      <a href="/servicos/gestao-de-trafego/" class="nav-mobile-sublink">Gestão de Tráfego</a>
+      <a href="/servicos/landing-page/" class="nav-mobile-sublink">Landing Page</a>
+      <a href="/servicos/dashboard-dados/" class="nav-mobile-sublink">Dashboard & Dados</a>
+    </div>
+    <a href="/contato/" class="nav-mobile-link">Contato</a>
+  </nav>
+
   <main>
-    <section class="container section-padding" style="max-width: 800px;">
-      <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Política de Privacidade</h1>
-      <p style="color: var(--muted); margin-bottom: 3rem;">Última atualização: abril de 2025</p>
-      
-      <div style="color: var(--text); line-height: 1.8;">
-        <p style="margin-bottom: 1.5rem;">Esta Política de Privacidade descreve como a <strong>Redoclub</strong> (João Pedro Redó — CNPJ 47.889.684/0001-98) coleta, utiliza e protege as informações dos usuários que interagem com nossos serviços, plataformas e aplicações, incluindo integrações com redes sociais como o Facebook/Meta.</p>
+    <section class="section-spacing" style="padding-top: 120px;">
+      <div class="container" style="max-width: 800px;">
+        <h1 class="hero-title" style="margin-bottom: 8px;">Política de Privacidade</h1>
+        <p class="subtitle" style="margin-bottom: 48px;">Última atualização: abril de 2025</p>
 
-        <h3 style="color: var(--accent); margin-top: 2rem; margin-bottom: 1rem;">1. Dados que coletamos</h3>
-        <p style="margin-bottom: 1rem;">Podemos coletar as seguintes categorias de dados, conforme a interação do usuário:</p>
-        <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem; color: var(--muted);">
-          <li>Dados de identificação: nome, e-mail, telefone e WhatsApp fornecidos voluntariamente;</li>
-          <li>Dados de comportamento: páginas visitadas, tempo de sessão e origem do acesso;</li>
-          <li>Dados de campanhas: informações provenientes de anúncios Meta Ads e Google Ads;</li>
-          <li>Dados de CRM: informações inseridas em formulários de qualificação ou atendimento automatizado.</li>
+        <p class="body-text" style="margin-bottom: 32px;">Esta Política de Privacidade descreve como a <strong>Redoclub</strong> (Joao Pedro Redo &mdash; CNPJ 47.889.684/0001-98) coleta, utiliza e protege as informações dos usuários que interagem com nossos serviços, plataformas e aplicações, incluindo integrações com redes sociais como o Facebook/Meta.</p>
+
+        <h2 class="section-title" style="font-size: 24px; margin-bottom: 16px;">1. Dados que coletamos</h2>
+        <p class="body-text" style="margin-bottom: 16px;">Podemos coletar as seguintes categorias de dados, conforme a interação do usuário:</p>
+        <ul class="body-text" style="padding-left: 24px; margin-bottom: 32px;">
+          <li style="margin-bottom: 8px;">Dados de identificação: nome, e-mail, telefone e WhatsApp fornecidos voluntariamente;</li>
+          <li style="margin-bottom: 8px;">Dados de comportamento: páginas visitadas, tempo de sessão e origem do acesso;</li>
+          <li style="margin-bottom: 8px;">Dados de campanhas: informações provenientes de anúncios Meta Ads e Google Ads;</li>
+          <li style="margin-bottom: 8px;">Dados de CRM: informações inseridas em formulários de qualificação ou atendimento automatizado.</li>
         </ul>
 
-        <h3 style="color: var(--accent); margin-top: 2rem; margin-bottom: 1rem;">2. Finalidade do uso dos dados</h3>
-        <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem; color: var(--muted);">
-          <li>Prestar os serviços contratados ou solicitados;</li>
-          <li>Qualificar e segmentar leads para fins comerciais;</li>
-          <li>Mensurar a efetividade de campanhas de tráfego pago;</li>
-          <li>Melhorar nossos sistemas e fluxos de atendimento;</li>
-          <li>Cumprir obrigações legais e regulatórias.</li>
+        <h2 class="section-title" style="font-size: 24px; margin-bottom: 16px;">2. Finalidade do uso dos dados</h2>
+        <ul class="body-text" style="padding-left: 24px; margin-bottom: 32px;">
+          <li style="margin-bottom: 8px;">Prestar os serviços contratados ou solicitados;</li>
+          <li style="margin-bottom: 8px;">Qualificar e segmentar leads para fins comerciais;</li>
+          <li style="margin-bottom: 8px;">Mensurar a efetividade de campanhas de tráfego pago;</li>
+          <li style="margin-bottom: 8px;">Melhorar nossos sistemas e fluxos de atendimento;</li>
+          <li style="margin-bottom: 8px;">Cumprir obrigações legais e regulatórias.</li>
         </ul>
 
-        <h3 style="color: var(--accent); margin-top: 2rem; margin-bottom: 1rem;">3. Base legal (LGPD)</h3>
-        <p style="margin-bottom: 1.5rem;">O tratamento de dados pessoais realizado pela Redoclub se fundamenta nas bases legais previstas na Lei Geral de Proteção de Dados (Lei nº 13.709/2018): consentimento do titular, legítimo interesse, execução de contrato e cumprimento de obrigação legal.</p>
+        <h2 class="section-title" style="font-size: 24px; margin-bottom: 16px;">3. Base legal (LGPD)</h2>
+        <p class="body-text" style="margin-bottom: 32px;">O tratamento de dados pessoais realizado pela Redoclub se fundamenta nas bases legais previstas na Lei Geral de Proteção de Dados (Lei nº 13.709/2018): consentimento do titular, legítimo interesse, execução de contrato e cumprimento de obrigação legal.</p>
 
-        <h3 style="color: var(--accent); margin-top: 2rem; margin-bottom: 1rem;">4. Contato do responsável</h3>
-        <p style="margin-bottom: 1.5rem;">
-          João Pedro Redó — CNPJ 47.889.684/0001-98<br>
-          Av. São Bento, 218 — Rio Negro, São Bento do Sul — SC, CEP 89.287-365<br>
-          E-mails: <a href="mailto:joaoredo@hotmail.com" style="color: var(--accent);">joaoredo@hotmail.com</a> ou <a href="mailto:contato@redoclub.com.br" style="color: var(--accent);">contato@redoclub.com.br</a>
-        </p>
+        <h2 class="section-title" style="font-size: 24px; margin-bottom: 16px;">4. Compartilhamento de dados</h2>
+        <p class="body-text" style="margin-bottom: 32px;">Não comercializamos dados pessoais. Podemos compartilhar informações com ferramentas de terceiros utilizadas para prestação dos serviços (ex: plataformas de CRM, automação e publicidade), sempre sob termos de uso e privacidade adequados. Dados podem ser compartilhados com autoridades competentes quando exigido por lei.</p>
+
+        <h2 class="section-title" style="font-size: 24px; margin-bottom: 16px;">5. Integrações com Meta (Facebook/Instagram)</h2>
+        <p class="body-text" style="margin-bottom: 32px;">Nossas aplicações podem utilizar a API do Facebook para fins de geração de leads, rastreamento de conversões e automação de mensagens. O uso dessas ferramentas segue os Termos de Serviço e a Política de Privacidade da Meta. Não armazenamos credenciais de acesso dos usuários às plataformas Meta.</p>
+
+        <h2 class="section-title" style="font-size: 24px; margin-bottom: 16px;">6. Retenção de dados</h2>
+        <p class="body-text" style="margin-bottom: 32px;">Os dados são mantidos pelo período necessário à prestação dos serviços ou ao cumprimento de obrigações legais. Após esse período, os dados são anonimizados ou excluídos de forma segura.</p>
+
+        <h2 class="section-title" style="font-size: 24px; margin-bottom: 16px;">7. Direitos do titular</h2>
+        <p class="body-text" style="margin-bottom: 16px;">Em conformidade com a LGPD, o titular tem direito a:</p>
+        <ul class="body-text" style="padding-left: 24px; margin-bottom: 16px;">
+          <li style="margin-bottom: 8px;">Confirmar a existência de tratamento de seus dados;</li>
+          <li style="margin-bottom: 8px;">Acessar, corrigir ou atualizar seus dados;</li>
+          <li style="margin-bottom: 8px;">Solicitar a portabilidade, anonimização ou exclusão de seus dados;</li>
+          <li style="margin-bottom: 8px;">Revogar o consentimento a qualquer momento;</li>
+          <li style="margin-bottom: 8px;">Peticionar à Autoridade Nacional de Proteção de Dados (ANPD).</li>
+        </ul>
+        <p class="body-text" style="margin-bottom: 32px;">Para exercer esses direitos, entre em contato pelos e-mails informados abaixo.</p>
+
+        <h2 class="section-title" style="font-size: 24px; margin-bottom: 16px;">8. Segurança</h2>
+        <p class="body-text" style="margin-bottom: 32px;">Adotamos medidas técnicas e organizacionais adequadas para proteger os dados pessoais contra acessos não autorizados, perdas ou divulgações indevidas, incluindo uso de conexões criptografadas (HTTPS), controle de acesso e boas práticas de desenvolvimento seguro.</p>
+
+        <h2 class="section-title" style="font-size: 24px; margin-bottom: 16px;">9. Cookies</h2>
+        <p class="body-text" style="margin-bottom: 32px;">Podemos utilizar cookies e tecnologias similares para fins de rastreamento de desempenho e personalização de conteúdo. O usuário pode gerenciar as preferências de cookies diretamente no navegador.</p>
+
+        <h2 class="section-title" style="font-size: 24px; margin-bottom: 16px;">10. Alterações nesta política</h2>
+        <p class="body-text" style="margin-bottom: 32px;">Esta política pode ser atualizada periodicamente. A versão vigente sempre estará disponível nesta página com a data da última revisão.</p>
+
+        <h2 class="section-title" style="font-size: 24px; margin-bottom: 16px;">11. Contato do responsável</h2>
+        <p class="body-text">Joao Pedro Redo &mdash; CNPJ 47.889.684/0001-98<br>Av. São Bento, 218 &mdash; Rio Negro, São Bento do Sul &mdash; SC, CEP 89.287-365<br>E-mails: <a href="mailto:joaoredo@hotmail.com">joaoredo@hotmail.com</a> ou <a href="mailto:contato@redoclub.com.br">contato@redoclub.com.br</a></p>
+
       </div>
     </section>
   </main>
+
   <footer>
     <div class="container footer-grid">
-      <div><h3 style="font-weight: 800; font-size: 1.5rem;">Redo<span class="text-accent">club</span></h3><p class="footer-desc">São Bento do Sul — SC</p></div>
-      <div class="footer-links"><ul><li><a href="/">Home</a></li><li><a href="/contato/">Contato</a></li></ul></div>
+      <div class="footer-col" style="grid-column: span 1;">
+        <a href="/" class="footer-logo">Redoclub</a>
+        <p>Automação inteligente, CRM e treinamento para negócios que crescem com eficiência.</p>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Serviços</h4>
+        <ul>
+          <li><a href="/servicos/agente-de-ia/">Agente de IA</a></li>
+          <li><a href="/servicos/implementacao-de-crm/">Implementação de CRM</a></li>
+          <li><a href="/servicos/gestao-de-trafego/">Gestão de Tráfego</a></li>
+          <li><a href="/servicos/landing-page/">Landing Page</a></li>
+          <li><a href="/servicos/dashboard-dados/">Dashboard & Dados</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li><p>Telefone: +55 (47) 98900-2948</p></li>
+          <li><p>WhatsApp: <a href="https://wa.me/5547989002948" target="_blank">+55 (47) 98900-2948</a></p></li>
+          <li><p>E-mail: <a href="mailto:contato@redoclub.com.br">contato@redoclub.com.br</a></p></li>
+          <li><p>Localização: São Bento do Sul &mdash; SC</p></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacidade/">Política de Privacidade</a></li>
+          <li><p>CNPJ: 47.889.684/0001-98</p></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="small-text">&copy; 2025 Redoclub &mdash; Joao Pedro Redo. Todos os direitos reservados.</p>
+      </div>
     </div>
   </footer>
   <script src="/script.js"></script>

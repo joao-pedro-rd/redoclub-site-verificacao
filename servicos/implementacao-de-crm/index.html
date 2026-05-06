@@ -3,51 +3,170 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Implementação de CRM | Redoclub</title>
-  <meta name="description" content="Implementação completa com fluxos, etapas e automações do zero.">
+  <title>Implementação de CRM - Redoclub | Infraestrutura de qualificação</title>
+  <meta name="description" content="Implementação completa do Kommo CRM do zero com automações que facilitam o trabalho do vendedor.">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <nav><div class="container nav-container"><a href="/" class="nav-logo">Redo<span>club</span></a><button class="mobile-menu-btn">☰</button><ul class="nav-links"><li><a href="/#servicos">Serviços</a></li><li><a href="/#diferenciais">Por que nós</a></li><li><a href="/contato/">Contato</a></li></ul></div></nav>
+  <header>
+    <div class="container nav-container">
+      <a href="/" class="logo" aria-label="Página inicial da Redoclub">Redoclub</a>
+      <nav class="nav-desktop" aria-label="Navegação principal desktop">
+        <a href="/#sobre" class="nav-link">Sobre</a>
+        <div class="dropdown">
+          <a href="/#servicos" class="nav-link" aria-haspopup="true">Serviços</a>
+          <div class="dropdown-content" aria-label="Menu de serviços">
+            <a href="/servicos/agente-de-ia/" class="dropdown-item">Agente de IA</a>
+            <a href="/servicos/implementacao-de-crm/" class="dropdown-item">Implementação de CRM</a>
+            <a href="/servicos/gestao-de-trafego/" class="dropdown-item">Gestão de Tráfego</a>
+            <a href="/servicos/landing-page/" class="dropdown-item">Landing Page</a>
+            <a href="/servicos/dashboard-dados/" class="dropdown-item">Dashboard & Dados</a>
+          </div>
+        </div>
+        <a href="/contato/" class="nav-link">Contato</a>
+      </nav>
+      <button class="burger-menu" id="burger-btn" aria-label="Abrir menu mobile" aria-expanded="false" aria-controls="mobile-menu">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+    </div>
+  </header>
+
+  <nav class="nav-mobile-overlay" id="mobile-menu" aria-label="Navegação principal mobile">
+    <a href="/#sobre" class="nav-mobile-link">Sobre</a>
+    <button class="nav-mobile-link" id="mobile-servicos-toggle" aria-expanded="false" style="background:none; border:none; width:100%; text-align:left; border-bottom: 1px solid rgba(255,255,255,0.05);">
+      Serviços <span class="icon" aria-hidden="true">+</span>
+    </button>
+    <div class="mobile-submenu" id="mobile-submenu">
+      <a href="/servicos/agente-de-ia/" class="nav-mobile-sublink">Agente de IA</a>
+      <a href="/servicos/implementacao-de-crm/" class="nav-mobile-sublink">Implementação de CRM</a>
+      <a href="/servicos/gestao-de-trafego/" class="nav-mobile-sublink">Gestão de Tráfego</a>
+      <a href="/servicos/landing-page/" class="nav-mobile-sublink">Landing Page</a>
+      <a href="/servicos/dashboard-dados/" class="nav-mobile-sublink">Dashboard & Dados</a>
+    </div>
+    <a href="/contato/" class="nav-mobile-link">Contato</a>
+  </nav>
+
   <main>
-    <section class="hero container section-padding">
-      <div style="font-size: 3rem; margin-bottom: 1rem;">🔗</div>
-      <h1>Implementação de CRM</h1>
-      <p>Processo comercial estruturado e automatizado no Kommo.</p>
-    </section>
-    <section class="container section-padding" style="background: var(--surface); border-radius: var(--radius); margin-bottom: 4rem;">
-      <div class="grid-2x2">
-        <div>
-          <h2 style="color: var(--accent); margin-bottom: 1rem; font-size: 1.5rem;">O Problema</h2>
-          <p style="color: var(--text);">CRM existe mas não é usado. Histórico perdido. Lead quente sem follow-up. Time continua em planilha.</p>
+    <section class="hero-service">
+      <div class="container">
+        <div class="hero-service-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="48" height="48" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
         </div>
-        <div>
-          <h2 style="color: var(--accent); margin-bottom: 1rem; font-size: 1.5rem;">A Solução</h2>
-          <p style="color: var(--text);">Implementação completa com fluxos, etapas e automações do zero. Treinamento do time.</p>
-        </div>
+        <h1 class="hero-title">Implementação de CRM</h1>
+        <p class="subtitle" style="max-width: 600px; margin: 0 auto;">Setup completo do Kommo CRM com fluxos, automações e integração ao tráfego.</p>
       </div>
-      <div style="margin-top: 3rem;">
-        <h2 style="margin-bottom: 1.5rem; font-size: 1.5rem;">Como funciona</h2>
-        <ul style="color: var(--muted); padding-left: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
-          <li>Mapeamento completo do seu processo de vendas.</li>
-          <li>Configuração das etapas de funil e campos personalizados no Kommo.</li>
-          <li>Criação de automações (tarefas automáticas, mensagens e alertas).</li>
-          <li>Treinamento da equipe de vendas para adoção real da ferramenta.</li>
+    </section>
+
+    <section class="service-section">
+      <div class="container" style="max-width: 800px;">
+        <h2 class="section-title">O desafio</h2>
+        <p class="body-text">Você tem CRM, mas ninguém usa. Histórico de leads está espalhado, conversas perdidas, leads quentes sem follow-up marcado, time continua usando planilha paralelamente. Informação não flui.</p>
+      </div>
+    </section>
+
+    <section class="service-section highlight">
+      <div class="container" style="max-width: 800px;">
+        <h2 class="section-title">O que entregamos</h2>
+        <ul class="service-list">
+          <li>Implementação completa do Kommo CRM do zero</li>
+          <li>Definição de etapas e fluxos de vendas adaptados ao seu negócio</li>
+          <li>Automações que facilitam o trabalho do vendedor</li>
+          <li>Integração com tráfego pago e agentes de IA</li>
+          <li>Treinamento prático do time</li>
         </ul>
       </div>
-      <div style="margin-top: 3rem; padding: 2rem; border: 1px solid var(--accent); border-radius: var(--radius);">
-        <h2 style="color: var(--accent); margin-bottom: 1rem; font-size: 1.5rem;">O Diferencial</h2>
-        <p>CRM conectado ao tráfego e automações — não é ferramenta isolada, é o centro da sua operação validado pela nossa operação diária.</p>
+    </section>
+
+    <section class="service-section">
+      <div class="container" style="max-width: 800px;">
+        <h2 class="section-title">Fluxo de implementação</h2>
+        <div class="timeline">
+          <div class="timeline-step">
+            <div class="timeline-number">1</div>
+            <div>
+              <h3 class="card-title" style="margin-bottom: 4px;">Mapeamento</h3>
+              <p class="body-text">Mapeamos seu processo de vendas</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-number">2</div>
+            <div>
+              <h3 class="card-title" style="margin-bottom: 4px;">Configuração</h3>
+              <p class="body-text">Configuramos etapas, campos e automações no CRM</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-number">3</div>
+            <div>
+              <h3 class="card-title" style="margin-bottom: 4px;">Integração</h3>
+              <p class="body-text">Integramos com suas fontes de tráfego</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-number">4</div>
+            <div>
+              <h3 class="card-title" style="margin-bottom: 4px;">Treinamento</h3>
+              <p class="body-text">Treinamos o time e mantemos suporte contínuo</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div style="margin-top: 4rem; text-align: center;">
-        <a href="/contato/" class="btn-primary">Falar sobre a Implementação de CRM →</a>
+    </section>
+
+    <section class="service-section" style="background: var(--bg-card); border-top: 1px solid var(--border);">
+      <div class="container" style="max-width: 800px;">
+        <h2 class="section-title">Por que funciona diferente</h2>
+        <p class="body-text">CRM conectado ao tráfego e automações &mdash; não é ferramenta isolada. Você não só tem dados bonitos, você tem ação automática baseada naqueles dados.</p>
+      </div>
+    </section>
+
+    <section class="section-spacing" style="text-align: center;">
+      <div class="container">
+        <a href="/contato/?assunto=Implementa%C3%A7%C3%A3o%20de%20CRM" class="btn btn-primary">Falar sobre Implementação de CRM <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" style="display:inline;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
       </div>
     </section>
   </main>
+
   <footer>
     <div class="container footer-grid">
-      <div><h3 style="font-weight: 800; font-size: 1.5rem;">Redo<span class="text-accent">club</span></h3><p class="footer-desc">São Bento do Sul — SC</p></div>
-      <div class="footer-links"><ul><li><a href="/">Home</a></li><li><a href="/contato/">Contato</a></li></ul></div>
+      <div class="footer-col" style="grid-column: span 1;">
+        <a href="/" class="footer-logo">Redoclub</a>
+        <p>Automação inteligente, CRM e treinamento para negócios que crescem com eficiência.</p>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Serviços</h4>
+        <ul>
+          <li><a href="/servicos/agente-de-ia/">Agente de IA</a></li>
+          <li><a href="/servicos/implementacao-de-crm/">Implementação de CRM</a></li>
+          <li><a href="/servicos/gestao-de-trafego/">Gestão de Tráfego</a></li>
+          <li><a href="/servicos/landing-page/">Landing Page</a></li>
+          <li><a href="/servicos/dashboard-dados/">Dashboard & Dados</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li><p>Telefone: +55 (47) 98900-2948</p></li>
+          <li><p>WhatsApp: <a href="https://wa.me/5547989002948" target="_blank">+55 (47) 98900-2948</a></p></li>
+          <li><p>E-mail: <a href="mailto:contato@redoclub.com.br">contato@redoclub.com.br</a></p></li>
+          <li><p>Localização: São Bento do Sul &mdash; SC</p></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacidade/">Política de Privacidade</a></li>
+          <li><p>CNPJ: 47.889.684/0001-98</p></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="footer-bottom">
+        <p class="small-text">&copy; 2025 Redoclub &mdash; Joao Pedro Redo. Todos os direitos reservados.</p>
+      </div>
     </div>
   </footer>
   <script src="/script.js"></script>
