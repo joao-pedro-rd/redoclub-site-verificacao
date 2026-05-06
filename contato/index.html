@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato | Redoclub</title>
+  <meta name="description" content="Entre em contato com a Redoclub">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <nav><div class="container nav-container"><a href="/" class="nav-logo">Redo<span>club</span></a><button class="mobile-menu-btn">☰</button><ul class="nav-links"><li><a href="/#servicos">Serviços</a></li><li><a href="/#diferenciais">Por que nós</a></li><li><a href="/contato/">Contato</a></li></ul></div></nav>
+  <main>
+    <section class="container section-padding" style="max-width: 800px;">
+      <h1 style="font-size: 3rem; margin-bottom: 1.5rem;">Fale com a gente</h1>
+      <p style="color: var(--muted); margin-bottom: 3rem; font-size: 1.1rem;">Pronto pra montar sua infraestrutura de qualificação?</p>
+      
+      <div class="grid-2x2" style="margin-bottom: 4rem; grid-template-columns: 1fr 1fr;">
+        <div class="card">
+          <h3 style="color: var(--accent); margin-bottom: 1rem;">WhatsApp</h3>
+          <p style="color: var(--text);"><a href="https://wa.me/5547989002948" target="_blank" style="color: #fff; text-decoration: none;">+55 (47) 98900-2948</a></p>
+        </div>
+        <div class="card">
+          <h3 style="color: var(--accent); margin-bottom: 1rem;">E-mail</h3>
+          <p style="color: var(--text);"><a href="mailto:contato@redoclub.com.br" style="color: #fff; text-decoration: none;">contato@redoclub.com.br</a></p>
+          <p style="color: var(--text);"><a href="mailto:joaoredo@hotmail.com" style="color: #fff; text-decoration: none;">joaoredo@hotmail.com</a></p>
+        </div>
+      </div>
+
+      <div style="background: var(--surface); padding: 2rem; border-radius: var(--radius); border: 1px solid var(--border);">
+        <h2 style="margin-bottom: 1.5rem; font-size: 1.5rem;">Envie uma mensagem</h2>
+        <form onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso!'); this.reset();">
+          <div class="form-group">
+            <label>Nome</label>
+            <input type="text" required placeholder="Seu nome completo">
+          </div>
+          <div class="form-group">
+            <label>Empresa</label>
+            <input type="text" required placeholder="Nome da sua empresa">
+          </div>
+          <div class="form-group">
+            <label>Assunto</label>
+            <input type="text" required placeholder="Ex: Implementação de CRM">
+          </div>
+          <div class="form-group">
+            <label>Mensagem</label>
+            <textarea rows="4" required placeholder="Como podemos ajudar o seu negócio?"></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="width: 100%;">Enviar mensagem</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container footer-grid">
+      <div><h3 style="font-weight: 800; font-size: 1.5rem;">Redo<span class="text-accent">club</span></h3><p class="footer-desc">São Bento do Sul — SC</p></div>
+      <div class="footer-links"><ul><li><a href="/">Home</a></li><li><a href="/contato/">Contato</a></li><li><a href="/privacidade/">Privacidade</a></li></ul></div>
+    </div>
+  </footer>
+  <script src="/script.js"></script>
+</body>
+</html>
